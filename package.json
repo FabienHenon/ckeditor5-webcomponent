@@ -1,0 +1,23 @@
+{
+  "name": "ckeditor-webcomponent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/x-ckeditor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabienHenon/ckeditor-webcomponent.git"
+  },
+  "keywords": [
+    "ckeditor",
+    "webcomponent"
+  ],
+  "author": "Fabien Henon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FabienHenon/ckeditor-webcomponent/issues"
+  },
+  "homepage": "https://github.com/FabienHenon/ckeditor-webcomponent#readme"
+}
