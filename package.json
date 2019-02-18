@@ -1,5 +1,5 @@
 {
-  "name": "ckeditor-webcomponent",
+  "name": "ckeditor5-webcomponent",
   "version": "1.0.0",
   "description": "",
   "main": "src/x-ckeditor.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FabienHenon/ckeditor-webcomponent.git"
+    "url": "git+https://github.com/FabienHenon/ckeditor5-webcomponent.git"
   },
   "keywords": [
     "ckeditor",
@@ -17,7 +17,7 @@
   "author": "Fabien Henon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FabienHenon/ckeditor-webcomponent/issues"
+    "url": "https://github.com/FabienHenon/ckeditor5-webcomponent/issues"
   },
-  "homepage": "https://github.com/FabienHenon/ckeditor-webcomponent#readme"
+  "homepage": "https://github.com/FabienHenon/ckeditor5-webcomponent#readme"
 }

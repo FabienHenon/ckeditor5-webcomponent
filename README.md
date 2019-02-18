@@ -1,11 +1,11 @@
-# ckeditor-webcomponent
+# ckeditor5-webcomponent
 
 This package wraps the [ckeditor5](https://ckeditor.com) in a webcomponent named `x-ckeditor`.
 
 ## Install
 
 ```
-$ npm install --save ckeditor-webcomponent
+$ npm install --save ckeditor5-webcomponent
 ```
 
 In order to be able to use this component you will have to install [polyfills for webcomponents (v1 spec)](https://github.com/WebComponents/webcomponentsjs), and [ckeditor](https://ckeditor.com/docs/ckeditor5/latest/framework/guides/quick-start.html)
@@ -29,7 +29,7 @@ npm install --save @ckeditor/ckeditor5-build-classic
 _index.js_
 ```js
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import EditorManager from 'ckeditor-webcomponent';
+import EditorManager from 'ckeditor5-webcomponent';
 
 // We register the ClassicEditor under the name 'classic'
 EditorManager.register('classic', ClassicEditor);
@@ -103,7 +103,7 @@ _index.js_
 ```js
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import NewClassicEditor from './my-build';
-import EditorManager from 'ckeditor-webcomponent';
+import EditorManager from 'ckeditor5-webcomponent';
 
 // We register the ClassicEditor under the name 'classic'
 EditorManager.register('classic', ClassicEditor);
