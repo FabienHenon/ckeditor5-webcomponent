@@ -22,7 +22,7 @@ var manager = new EditorsManager();
 // Define the webcomponent
 window.customElements.define('x-ckeditor', class extends HTMLElement {
   static get observedAttributes() {
-    return ['content', 'config', 'editor'];
+    return ['content', 'config', 'editor', 'target-id'];
   }
 
   get config() {
@@ -61,6 +61,12 @@ window.customElements.define('x-ckeditor', class extends HTMLElement {
         this.disconnectedCallback();
         this.connectedCallback();
       }
+    } else if (name == 'target-id') {
+      this._targetId = newValue;
+      if (this._editor !== null) {
+        this.disconnectedCallback();
+        this.connectedCallback();
+      }
     }
   }
 
@@ -71,6 +77,7 @@ window.customElements.define('x-ckeditor', class extends HTMLElement {
     this._content = '';
     this._editor = null;
     this._editorBuild = null;
+    this._targetId = null;
   }
 
   connectedCallback() {
@@ -79,9 +86,14 @@ window.customElements.define('x-ckeditor', class extends HTMLElement {
       return;
     }
 
+    var target = this;
+    if (this._targetId) {
+      target = document.getElementById(this._targetId);
+    }
+
     var base = this;
     this._editorBuild
-      .create(this, this._config)
+      .create(target, this._config)
       .then(editor => {
         base._editor = editor;
         base._editor.model.document.on('change:data', function (e) {

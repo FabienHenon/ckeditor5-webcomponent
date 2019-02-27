@@ -125,11 +125,12 @@ _index.html_
 
 ## Options
 
-| Property  | Type     | Description                       |
-| --------- | -------- | --------------------------------- |
-| `config`  | `string` | CKEditor config                   |
-| `content` | `string` | HTML string of the editor content |
-| `editor`  | `string` | The name of the registered build  |
+| Property    | Type     | Description                                                                                               |
+| ----------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| `config`    | `string` | _(optional)_ CKEditor config                                                                              |
+| `content`   | `string` | _(optional)_ HTML string of the editor content                                                            |
+| `editor`    | `string` | The name of the registered build                                                                          |
+| `target-id` | `string` | _(optional)_ The id of the element to bind to. If left empty the editor will render for this webcomponent |
 
 ### `config`
 
