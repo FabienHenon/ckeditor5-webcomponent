@@ -91,7 +91,7 @@ export class XCkeditor {
         base.realEditor.model.document.on('change:data', function (_e: any) {
           var content = base.realEditor.getData();
           base.content = content;
-          base.ckeditorchange.emit('ckeditorchange', { detail: content });
+          base.ckeditorchange.emit(content);
         });
       })
       .catch(error => {

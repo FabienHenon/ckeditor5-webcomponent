@@ -21,6 +21,9 @@
 
         var elt = document.createElement('x-ckeditor');
         elt.setAttribute('editor', 'default');
+        elt.addEventListener('ckeditorchange', function (e) {
+          console.log('Text', e);
+        });
 
         document
           .getElementById('root')
