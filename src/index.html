@@ -31,6 +31,7 @@
         elt.setAttribute('editor', 'default');
         elt.addEventListener('ckeditorchange', function (e) {
           console.log('Text', e);
+          // setContent(e.detail);
         });
         elt.innerHTML = '<strong>Me!</strong';
 
