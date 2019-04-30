@@ -12,6 +12,14 @@
 
   <div id="root"></div>
 
+  <button onClick="javascript: setContent('this is the new content')">Set content</button>
+
+  <script type="text/javascript">
+    function setContent(content) {
+      document.querySelector('x-ckeditor').setAttribute('content', content);
+    }
+  </script>
+
   <script type="module">
     import('https://unpkg.com/@ckeditor/ckeditor5-build-classic')
       .then(function (ClassEditor) {

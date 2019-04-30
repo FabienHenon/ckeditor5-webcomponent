@@ -4,7 +4,7 @@ import manager from '../../editor-manager';
 
 @Component({
   tag: 'x-ckeditor',
-  shadow: true
+  shadow: false
 })
 export class XCkeditor {
   editorBuild: any = null;
@@ -27,11 +27,9 @@ export class XCkeditor {
 
   @Watch('content')
   contentHandler(newValue: string, _oldValue: string): void {
-    if (newValue !== this.content) {
-      this.content = newValue;
-      if (this.realEditor !== null) {
-        this.realEditor.setData(this.content);
-      }
+    this.content = newValue;
+    if (this.realEditor !== null) {
+      this.realEditor.setData(this.content);
     }
   }
 
