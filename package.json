@@ -1,10 +1,26 @@
 {
   "name": "ckeditor5-webcomponent",
-  "version": "1.1.0",
-  "description": "",
-  "main": "src/x-ckeditor.js",
+  "version": "0.0.1",
+  "description": "ckeditor5 webcomponent",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/ionic.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "eventemitter3": "^3.1.2"
+  },
+  "devDependencies": {
+    "@stencil/core": "~0.16.2"
   },
   "repository": {
     "type": "git",

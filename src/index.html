@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/x-ckeditor.js"></script>
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+  <script type="module">
+    import('https://unpkg.com/@ckeditor/ckeditor5-build-classic')
+      .then(function (ClassEditor) {
+        window['ckeditors'] = {
+          default: ClassicEditor
+        };
+
+        var elt = document.createElement('x-ckeditor');
+        elt.setAttribute('editor', 'default');
+
+        document
+          .getElementById('root')
+          .appendChild(elt);
+      });
+  </script>
+
+</body>
+
+</html>
