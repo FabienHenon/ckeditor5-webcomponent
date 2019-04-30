@@ -26,10 +26,12 @@ export class XCkeditor {
   }) ckeditorchange: EventEmitter;
 
   @Watch('content')
-  contentHandler(newValue: string, _oldValue: string): void {
-    this.content = newValue;
-    if (this.realEditor !== null) {
-      this.realEditor.setData(this.content);
+  contentHandler(newValue: string, oldValue: string): void {
+    if (newValue != oldValue) {
+      this.content = newValue;
+      if (this.realEditor !== null) {
+        this.realEditor.setData(this.content);
+      }
     }
   }
 
@@ -88,7 +90,6 @@ export class XCkeditor {
         base.realEditor = editor;
         base.realEditor.model.document.on('change:data', function (_e: any) {
           var content = base.realEditor.getData();
-          base.content = content;
           base.ckeditorchange.emit(content);
         });
       })
